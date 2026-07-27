@@ -1,26 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  
- <meta name="google-site-verification" content="google420c58aff5210570" /> <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    
-    <title>أربكس البرمجة | السيمفونية الرقمية</title>
-    <meta name="description" content="أربكس البرمجة - حيث تتحول الأفكار إلى أنظمة ذكية. حلول روبوتية متكاملة ومشاريع هندسية.">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com/"> <meta property="og:title" content="✦ أربكس البرمجة | NEURO SYMPHONY ✦">
-    <meta property="og:description" content="من الخوادم الكمومية إلى الروبوتات المدركة — نبني واقعًا موازيًا من الإبداع التكنولوجي.">
-    
-    <meta property="og:image" content="https://images2.imgbox.com/0f/22/w3T2748P_o.png"> <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="✦ أربكس البرمجة | NEURO SYMPHONY ✦">
-    <meta property="twitter:description" content="من الخوادم الكمومية إلى الروبوتات المدركة — نبني واقعًا موازيًا من الإبداع التكنولوجي.">
-    <meta property="twitter:image" content="https://images2.imgbox.com/0f/22/w3T2748P_o.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah-Tech09 | اختبار تاريخ الأردن 2009 - متكامل</title>
     <style>
         * {
             margin: 0;
@@ -28,1198 +11,1123 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-cyan: #00f7ff;
-            --primary-purple: #b000ff;
-            --primary-gold: #ffd966;
-            --dark-deep: #05050f;
-            --dark-surface: #0a0a1a;
-            --dark-elevated: #12122b;
-            --glass-edge: rgba(0, 247, 255, 0.4);
-            --neon-glow-cyan: 0 0 15px rgba(0, 247, 255, 0.8), 0 0 30px rgba(0, 247, 255, 0.4);
-            --neon-glow-purple: 0 0 15px rgba(176, 0, 255, 0.8);
-            --transition-smooth: all 0.5s cubic-bezier(0.2, 0.95, 0.4, 1.1);
-        }
-
         body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--dark-deep);
-            color: #eef5ff;
-            overflow-x: hidden;
-            line-height: 1.6;
-            cursor: none;
-        }
-
-        .cursor-dot, .cursor-outline {
-            pointer-events: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            border-radius: 50%;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-        }
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--primary-cyan);
-            box-shadow: var(--neon-glow-cyan);
-        }
-        .cursor-outline {
-            width: 40px;
-            height: 40px;
-            border: 1px solid rgba(0, 247, 255, 0.5);
-            transition: all 0.15s ease-out;
-            backdrop-filter: blur(2px);
-        }
-
-        #three-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            display: block;
-            opacity: 0.85;
-            pointer-events: none;
-        }
-
-        .noise-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: repeating-radial-gradient(circle at 20% 30%, rgba(0,255,255,0.03) 0px, rgba(0,0,0,0.3) 2px, transparent 3px);
-            pointer-events: none;
-            z-index: -1;
-            opacity: 0.6;
-        }
-
-        .glass-nav {
-            position: fixed;
-            top: 25px; right: 5%; left: 5%;
-            width: 90%;
-            padding: 0.8rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(5, 5, 15, 0.65);
-            backdrop-filter: blur(25px);
-            border-radius: 80px;
-            border: 1px solid rgba(0, 247, 255, 0.5);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.08);
-            z-index: 1000;
-            transition: var(--transition-smooth);
-        }
-        .glass-nav.scrolled {
-            top: 0; width: 100%; right: 0; left: 0;
-            border-radius: 0;
-            background: rgba(0, 0, 0, 0.9);
-            border-bottom: 1px solid var(--primary-cyan);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-        }
-
-        .logo {
-            font-family: 'Orbitron', monospace;
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #ffffff, var(--primary-cyan), var(--primary-purple), #ff66cc);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 2px;
-            animation: pulseLogo 3s infinite;
-        }
-        @keyframes pulseLogo {
-            0% { opacity: 0.8; text-shadow: 0 0 0px cyan; }
-            100% { opacity: 1; text-shadow: 0 0 10px rgba(0,247,255,0.5); }
-        }
-
-        .hero {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0000, #4a0000, #1a0000);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 20px;
+            direction: rtl;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(2px 2px at 20px 30px, #ff4444, transparent),
+                radial-gradient(2px 2px at 40px 70px, #ff6666, transparent),
+                radial-gradient(2px 2px at 50px 160px, #ff2222, transparent),
+                radial-gradient(2px 2px at 90px 40px, #ff5555, transparent),
+                radial-gradient(2px 2px at 130px 80px, #ff3333, transparent),
+                radial-gradient(2px 2px at 160px 30px, #ff7777, transparent);
+            background-size: 200px 200px;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.6; }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, rgba(20, 0, 0, 0.95), rgba(60, 0, 0, 0.98));
+            border-radius: 25px;
+            box-shadow: 0 30px 80px rgba(255, 0, 0, 0.3), 0 0 60px rgba(255, 0, 0, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 50, 50, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff0000, #ff4444, #ff0000, #ff4444);
+            background-size: 300% 300%;
+            border-radius: 27px;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+            opacity: 0.4;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; opacity: 0.3; }
+            50% { opacity: 0.6; }
+            100% { background-position: 100% 50%; opacity: 0.3; }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #8b0000, #cc0000, #8b0000);
+            padding: 35px 30px;
             text-align: center;
-            padding: 8rem 6% 4rem;
-            position: relative;
-            background: radial-gradient(ellipse at 50% 40%, rgba(0,0,0,0.2) 0%, rgba(5,5,15,0.9) 100%);
-        }
-
-        .glow-chip {
-            background: rgba(0, 247, 255, 0.2);
-            border: 1.5px solid var(--primary-cyan);
-            border-radius: 60px;
-            padding: 0.7rem 2rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--primary-cyan);
-            margin-bottom: 2rem;
-            backdrop-filter: blur(4px);
-            box-shadow: var(--neon-glow-cyan);
-            font-weight: 600;
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 6.5rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-gradient-text {
-            background: linear-gradient(135deg, #ffffff, var(--primary-cyan), #ff66ff, var(--primary-purple));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-size: 300% auto;
-            animation: shimmer 6s linear infinite;
-        }
-
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
-
-        .section-premium {
-            padding: 6rem 8%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-            gap: 2.8rem;
-        }
-
-        .future-card {
-            background: rgba(10, 10, 26, 0.7);
-            backdrop-filter: blur(18px);
-            border-radius: 2.5rem;
-            border: 1px solid rgba(0,247,255,0.2);
-            padding: 2.5rem 1.8rem;
-            transition: var(--transition-smooth);
+            border-bottom: 3px solid #ff3333;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.4);
-            display: flex;
-            flex-direction: column;
         }
 
-        .future-card::before {
+        .header::after {
             content: '';
             position: absolute;
             top: -50%;
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(0,247,255,0.15), transparent 70%);
-            opacity: 0;
-            transition: opacity 0.6s;
-            pointer-events: none;
-        }
-        .future-card:hover::before {
-            opacity: 1;
+            background: radial-gradient(circle, rgba(255, 50, 50, 0.1) 0%, transparent 70%);
+            animation: headerPulse 6s ease-in-out infinite;
         }
 
-        .service-image-wrap {
-            width: 100%;
-            height: 220px;
-            border-radius: 1.8rem;
+        @keyframes headerPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(5deg); }
+        }
+
+        .header h1 {
+            font-size: 3em;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(255, 0, 0, 0.3), 0 4px 8px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 .highlight {
+            color: #ffcc00;
+            text-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
+        }
+
+        .header p {
+            font-size: 1.3em;
+            color: #ffcccc;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .dua-section {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), rgba(204, 0, 0, 0.2));
+            padding: 25px 30px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 50, 50, 0.2);
+            position: relative;
             overflow: hidden;
-            margin-bottom: 1.8rem;
-            border: 2px solid rgba(0, 247, 255, 0.3);
-            transition: 0.4s;
-        }
-        .service-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.6s ease;
-        }
-        .future-card:hover .service-img {
-            transform: scale(1.12);
-            filter: brightness(1.1) contrast(1.05);
         }
 
-        .sub-small-proj { background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,30,40,0.9)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=500'); background-blend-mode: overlay; background-size: cover; background-position: center; }
-        .sub-dev-code { background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(80,0,100,0.9)), url('https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=500'); background-blend-mode: overlay; background-size: cover; background-position: center; }
-        .sub-web-sites { background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,70,70,0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500'); background-blend-mode: overlay; background-size: cover; background-position: center; }
-        .sub-it-student { background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(120,0,120,0.9)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=500'); background-blend-mode: overlay; background-size: cover; background-position: center; }
-
-        .future-card:hover {
-            transform: translateY(-22px) scale(1.02);
-            border-color: var(--primary-cyan);
-            box-shadow: 0 35px 60px rgba(0, 247, 255, 0.4);
+        .dua-section::before {
+            content: '🤲';
+            position: absolute;
+            font-size: 8em;
+            opacity: 0.05;
+            top: -20px;
+            left: -20px;
+            transform: rotate(-15deg);
         }
 
-        .card-icon {
-            font-size: 3.8rem;
-            margin-bottom: 1.2rem;
-            color: var(--primary-cyan);
-            text-shadow: var(--neon-glow-cyan);
+        .dua-text {
+            font-size: 1.4em;
+            color: #ffdddd;
+            font-weight: 600;
+            line-height: 2;
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
         }
 
-        .btn-insta-sub {
+        .dua-text .arabic {
+            font-size: 1.8em;
+            color: #ffd700;
             display: block;
-            margin-top: auto;
-            padding: 0.9rem;
-            text-align: center;
-            background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            background-size: 200% auto;
-            color: white;
-            text-decoration: none;
-            border-radius: 60px;
-            font-weight: 800;
-            transition: 0.4s;
-            letter-spacing: 0.5px;
-        }
-        .btn-insta-sub:hover { transform: translateY(-5px); background-position: 100% 0; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-
-        .btn-cyber {
-            background: linear-gradient(95deg, #00e5ff, #9b4dff);
-            padding: 1rem 2.5rem;
-            border-radius: 60px;
-            font-weight: 800;
-            color: #000;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 0 15px rgba(0,229,255,0.5);
-        }
-        .btn-cyber:hover { transform: scale(1.05); color: white; box-shadow: 0 0 35px var(--primary-cyan); background: linear-gradient(95deg, #00c4ff, #b45eff); }
-
-        .social-glass {
-            width: 85px; height: 85px;
-            background: rgba(0, 247, 255, 0.1);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center; justify-content: center;
-            color: var(--primary-cyan);
-            border: 1.5px solid var(--primary-cyan);
-            text-decoration: none;
-            transition: 0.3s;
-            font-size: 2.4rem;
-            backdrop-filter: blur(8px);
-        }
-        .social-glass:hover { background: var(--primary-cyan); color: #000; box-shadow: 0 0 45px var(--primary-cyan); transform: translateY(-10px) rotate(5deg); }
-
-        .whatsapp-direct {
-            background: #25D366;
-            color: #000;
-            padding: 1.2rem 3rem;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 800;
-            display: inline-flex;
-            gap: 15px;
-            margin-top: 20px;
-            transition: 0.3s;
-            font-size: 1.2rem;
-            box-shadow: 0 10px 30px rgba(37,211,102,0.3);
-        }
-        .whatsapp-direct:hover { background: #20b859; box-shadow: 0 5px 40px #25D366; color: white; transform: translateY(-5px); }
-
-        .neon-particle {
-            position: fixed;
-            background: radial-gradient(circle, #00f7ff, #b000ff);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 1050;
-            opacity: 0;
-            animation: fadeGlow 1s ease-out forwards;
-        }
-        @keyframes fadeGlow {
-            0% { opacity: 0.9; transform: scale(0); box-shadow: 0 0 25px cyan; }
-            100% { opacity: 0; transform: scale(2.5); }
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
         }
 
-        .stats-grid {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
-        }
-        .stat-item {
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 900;
-            font-family: 'Orbitron', monospace;
-            color: var(--primary-cyan);
-            text-shadow: var(--neon-glow-cyan);
-            direction: ltr;
+        .dua-text .translation {
+            font-size: 1em;
+            color: #ffaaaa;
+            display: block;
         }
 
-        .cyber-input {
-            width: 100%;
-            padding: 15px;
-            background: rgba(0, 247, 255, 0.05);
-            border: 1px solid var(--primary-cyan);
-            border-radius: 15px;
-            color: white;
-            font-family: 'Cairo', sans-serif;
-            margin-bottom: 1.5rem;
-            outline: none;
-            transition: 0.3s;
-        }
-        .cyber-input:focus {
-            box-shadow: var(--neon-glow-cyan);
-            background: rgba(0, 247, 255, 0.1);
+        .dua-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: #ff4444;
+            animation: floatDua 3s ease-in-out infinite;
         }
 
-        footer {
-            text-align: center;
-            padding: 3rem;
-            background: rgba(0,0,0,0.9);
-            border-top: 2px solid var(--glass-edge);
-            backdrop-filter: blur(10px);
+        @keyframes floatDua {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
-        /* ==================== AI Chat Styles ==================== */
-        .ai-chat-trigger {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
-            border: 2px solid rgba(0, 247, 255, 0.6);
-            box-shadow: 0 0 25px rgba(0, 247, 255, 0.5), 0 0 60px rgba(176, 0, 255, 0.3);
-            cursor: pointer;
-            z-index: 9998;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: white;
-            transition: all 0.3s ease;
-            animation: chatPulse 2s infinite;
+        .content {
+            padding: 40px;
         }
-        
-        .ai-chat-trigger:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 40px rgba(0, 247, 255, 0.8), 0 0 80px rgba(176, 0, 255, 0.5);
-        }
-        
-        .ai-chat-trigger.active {
-            animation: none;
-            background: #ff3366;
-            box-shadow: 0 0 35px rgba(255, 51, 102, 0.7);
-        }
-        
-        @keyframes chatPulse {
-            0%, 100% { box-shadow: 0 0 25px rgba(0, 247, 255, 0.5), 0 0 60px rgba(176, 0, 255, 0.3); }
-            50% { box-shadow: 0 0 45px rgba(0, 247, 255, 0.9), 0 0 90px rgba(176, 0, 255, 0.6); }
-        }
-        
-        .ai-chat-window {
-            position: fixed;
-            bottom: 110px;
-            left: 30px;
-            width: 420px;
-            max-width: 90vw;
-            height: 550px;
-            max-height: 70vh;
-            background: rgba(5, 5, 15, 0.95);
-            backdrop-filter: blur(30px);
-            border-radius: 28px;
-            border: 1.5px solid rgba(0, 247, 255, 0.5);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 247, 255, 0.25), inset 0 1px 0 rgba(255,255,255,0.05);
-            z-index: 9997;
+
+        .screen {
             display: none;
-            flex-direction: column;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.2, 0.95, 0.4, 1.1);
+            animation: fadeInUp 0.6s ease;
         }
-        
-        .ai-chat-window.open {
-            display: flex;
-            animation: slideUp 0.4s ease-out;
+
+        .screen.active {
+            display: block;
         }
-        
-        @keyframes slideUp {
+
+        @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px) scale(0.95); }
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
-        
-        .ai-chat-header {
-            padding: 18px 22px;
-            background: linear-gradient(135deg, rgba(0, 247, 255, 0.15), rgba(176, 0, 255, 0.15));
-            border-bottom: 1px solid rgba(0, 247, 255, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .ai-chat-header-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .ai-avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: white;
-            box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
-        }
-        
-        .ai-header-info h4 {
-            font-family: 'Orbitron', monospace;
-            font-size: 15px;
-            background: linear-gradient(135deg, #fff, var(--primary-cyan));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin: 0;
-        }
-        
-        .ai-header-info span {
-            font-size: 11px;
-            color: #88ff88;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        
-        .ai-header-info span::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #00ff66;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #00ff66;
-            animation: blinkDot 1.5s infinite;
-        }
-        
-        @keyframes blinkDot {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-        
-        .ai-chat-close {
-            background: none;
-            border: none;
-            color: rgba(255,255,255,0.7);
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .ai-chat-close:hover {
-            color: #ff3366;
-            background: rgba(255,51,102,0.15);
-            box-shadow: 0 0 15px rgba(255,51,102,0.3);
-        }
-        
-        .ai-chat-messages {
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .ai-chat-messages::-webkit-scrollbar {
-            width: 5px;
-        }
-        
-        .ai-chat-messages::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.03);
-        }
-        
-        .ai-chat-messages::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--primary-cyan), var(--primary-purple));
-            border-radius: 10px;
-        }
-        
-        .ai-message {
-            display: flex;
-            gap: 10px;
-            animation: fadeInMsg 0.3s ease-out;
-        }
-        
-        @keyframes fadeInMsg {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .ai-message.bot {
-            align-self: flex-start;
-        }
-        
-        .ai-message.user {
-            align-self: flex-end;
-            flex-direction: row-reverse;
-        }
-        
-        .ai-message-avatar {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
-        
-        .ai-message.bot .ai-message-avatar {
-            background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
-            color: white;
-        }
-        
-        .ai-message.user .ai-message-avatar {
-            background: rgba(255,255,255,0.15);
-            color: var(--primary-cyan);
-        }
-        
-        .ai-message-content {
-            background: rgba(10, 10, 26, 0.8);
-            border: 1px solid rgba(0, 247, 255, 0.2);
-            border-radius: 18px;
-            padding: 12px 16px;
-            max-width: 78%;
-            font-size: 14px;
-            line-height: 1.6;
-            color: #e0e8ff;
-            word-wrap: break-word;
-            white-space: pre-wrap;
-        }
-        
-        .ai-message.user .ai-message-content {
-            background: rgba(0, 247, 255, 0.1);
-            border-color: rgba(0, 247, 255, 0.4);
-        }
-        
-        .ai-typing-indicator {
-            display: none;
-            padding: 10px 16px;
-            background: rgba(10, 10, 26, 0.8);
-            border: 1px solid rgba(0, 247, 255, 0.2);
-            border-radius: 18px;
-            width: fit-content;
-            gap: 5px;
-        }
-        
-        .ai-typing-indicator.active {
-            display: flex;
-        }
-        
-        .ai-typing-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--primary-cyan);
-            animation: typingBounce 1.2s infinite;
-        }
-        
-        .ai-typing-dot:nth-child(2) { animation-delay: 0.2s; }
-        .ai-typing-dot:nth-child(3) { animation-delay: 0.4s; }
-        
-        @keyframes typingBounce {
-            0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
-            30% { transform: translateY(-8px); opacity: 1; }
-        }
-        
-        .ai-chat-input-wrap {
-            padding: 16px 20px;
-            border-top: 1px solid rgba(0, 247, 255, 0.2);
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.4);
-        }
-        
-        .ai-chat-input {
-            flex: 1;
-            background: rgba(0, 247, 255, 0.05);
-            border: 1px solid rgba(0, 247, 255, 0.3);
-            border-radius: 25px;
-            padding: 12px 18px;
-            color: white;
-            font-family: 'Cairo', sans-serif;
-            font-size: 14px;
-            outline: none;
-            transition: 0.3s;
-            direction: rtl;
-        }
-        
-        .ai-chat-input:focus {
-            border-color: var(--primary-cyan);
-            box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
-            background: rgba(0, 247, 255, 0.08);
-        }
-        
-        .ai-chat-input::placeholder {
-            color: rgba(255,255,255,0.4);
-        }
-        
-        .ai-chat-send {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
-            border: none;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
-        }
-        
-        .ai-chat-send:hover {
-            transform: scale(1.08);
-            box-shadow: 0 0 30px rgba(0, 247, 255, 0.7);
-        }
-        
-        .ai-chat-send:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-        
-        .ai-quick-actions {
-            display: flex;
-            gap: 8px;
-            padding: 8px 20px;
-            flex-wrap: wrap;
-            border-top: 1px solid rgba(0, 247, 255, 0.1);
-        }
-        
-        .ai-quick-btn {
-            background: rgba(0, 247, 255, 0.08);
-            border: 1px solid rgba(0, 247, 255, 0.25);
-            border-radius: 20px;
-            padding: 6px 14px;
-            color: rgba(255,255,255,0.8);
-            font-size: 12px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-family: 'Cairo', sans-serif;
-            white-space: nowrap;
-        }
-        
-        .ai-quick-btn:hover {
-            background: rgba(0, 247, 255, 0.2);
-            border-color: var(--primary-cyan);
-            color: white;
-            box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .section-premium { padding: 3rem 5%; }
-            .stats-grid { gap: 2rem; }
-            .social-glass { width: 60px; height: 60px; font-size: 1.8rem; }
-            .glass-nav { padding: 0.5rem 1rem; }
-            .logo { font-size: 1.3rem; }
-            
-            .ai-chat-window {
-                width: 95vw;
-                left: 2.5vw;
-                bottom: 100px;
-                height: 480px;
-                max-height: 65vh;
-                border-radius: 24px;
+        .model-btn {
+            background: linear-gradient(145deg, #cc0000, #8b0000);
+            color: white;
+            border: 2px solid rgba(255, 50, 50, 0.3);
+            padding: 30px 20px;
+            border-radius: 18px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 30px rgba(255, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .model-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+
+        .model-btn:hover::before {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .model-btn:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 50px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.2);
+            border-color: #ff4444;
+        }
+
+        .model-btn:active {
+            transform: scale(0.95);
+        }
+
+        .model-btn .icon {
+            display: block;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .question-container {
+            background: linear-gradient(145deg, rgba(30, 0, 0, 0.9), rgba(60, 0, 0, 0.95));
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 50, 50, 0.15);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 50, 50, 0.3);
+        }
+
+        .question-number {
+            background: linear-gradient(135deg, #cc0000, #ff3333);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .progress {
+            font-size: 1em;
+            color: #ffaaaa;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #cc0000, #ff4444, #ff6666);
+            width: 0%;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .question-text {
+            font-size: 1.4em;
+            margin: 25px 0;
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 2;
+            padding: 15px 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .question-text .q-number {
+            color: #ff6666;
+            margin-left: 10px;
+        }
+
+        .options-group {
+            display: grid;
+            gap: 15px;
+        }
+
+        .option {
+            background: linear-gradient(145deg, rgba(40, 0, 0, 0.8), rgba(20, 0, 0, 0.9));
+            border: 2px solid rgba(255, 50, 50, 0.15);
+            padding: 18px 25px;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .option:hover {
+            border-color: #ff3333;
+            background: linear-gradient(145deg, rgba(60, 0, 0, 0.9), rgba(40, 0, 0, 0.95));
+            transform: translateX(-8px);
+            box-shadow: 0 8px 30px rgba(255, 0, 0, 0.2);
+        }
+
+        .option input[type="radio"] {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #ff0000;
+            filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
+        }
+
+        .option input[type="radio"]:checked {
+            accent-color: #ff0000;
+            transform: scale(1.1);
+        }
+
+        .option label {
+            flex: 1;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #ffdddd;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .option .opt-letter {
+            background: linear-gradient(135deg, #cc0000, #ff3333);
+            color: white;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.9em;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .feedback {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 14px;
+            display: none;
+            font-weight: 700;
+            text-align: center;
+            font-size: 1.1em;
+            border: 2px solid transparent;
+            animation: fadeInUp 0.4s ease;
+        }
+
+        .feedback.correct {
+            display: block;
+            background: linear-gradient(135deg, rgba(0, 200, 100, 0.2), rgba(0, 150, 80, 0.1));
+            color: #66ff99;
+            border-color: #00cc66;
+            box-shadow: 0 0 30px rgba(0, 204, 102, 0.2);
+        }
+
+        .feedback.incorrect {
+            display: block;
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(200, 0, 0, 0.1));
+            color: #ff6666;
+            border-color: #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+        }
+
+        .feedback .correct-answer {
+            color: #ffd700;
+            font-weight: 700;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.05em;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        button:hover::after {
+            opacity: 1;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #00aa55, #00cc66);
+            color: white;
+            box-shadow: 0 6px 25px rgba(0, 204, 102, 0.3);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px rgba(0, 204, 102, 0.5);
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, #cc0000, #ff3333);
+            color: white;
+            box-shadow: 0 6px 25px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn-next:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.5);
+        }
+
+        .btn-back {
+            background: linear-gradient(135deg, #444, #666);
+            color: white;
+        }
+
+        .btn-back:hover {
+            transform: translateY(-4px);
+            background: linear-gradient(135deg, #555, #777);
+        }
+
+        .btn-restart {
+            background: linear-gradient(135deg, #cc0000, #ff3333);
+            color: white;
+            box-shadow: 0 6px 25px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn-restart:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.5);
+        }
+
+        .results-container {
+            text-align: center;
+        }
+
+        .score-box {
+            background: linear-gradient(145deg, #8b0000, #cc0000);
+            color: white;
+            padding: 50px;
+            border-radius: 22px;
+            margin: 30px 0;
+            box-shadow: 0 15px 50px rgba(255, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 50, 50, 0.2);
+        }
+
+        .score-number {
+            font-size: 5.5em;
+            font-weight: 900;
+            margin: 15px 0;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .score-message {
+            font-size: 1.6em;
+            margin: 15px 0;
+            font-weight: 600;
+            color: #ffdddd;
+        }
+
+        .results-details {
+            background: linear-gradient(145deg, rgba(30, 0, 0, 0.9), rgba(60, 0, 0, 0.95));
+            padding: 25px;
+            border-radius: 18px;
+            margin: 25px 0;
+            max-height: 450px;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 50, 50, 0.1);
+        }
+
+        .results-details::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .results-details::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .results-details::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #cc0000, #ff3333);
+            border-radius: 10px;
+        }
+
+        .result-item {
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 12px;
+            text-align: right;
+            font-size: 0.95em;
+            border-right: 5px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .result-correct {
+            background: rgba(0, 200, 100, 0.15);
+            color: #66ff99;
+            border-right-color: #00cc66;
+        }
+
+        .result-incorrect {
+            background: rgba(255, 0, 0, 0.15);
+            color: #ff6666;
+            border-right-color: #ff0000;
+        }
+
+        .result-item strong {
+            color: #ffdddd;
+        }
+
+        .footer {
+            background: linear-gradient(145deg, rgba(10, 0, 0, 0.95), rgba(30, 0, 0, 0.98));
+            padding: 30px;
+            text-align: center;
+            color: #ffaaaa;
+            font-size: 1em;
+            border-top: 2px solid rgba(255, 50, 50, 0.15);
+        }
+
+        .footer a {
+            color: #ff4444;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .footer a:hover {
+            color: #ff6666;
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+        }
+
+        .subscribe-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 15px;
+            box-shadow: 0 8px 30px rgba(255, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            animation: pulseRed 2s ease-in-out infinite;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes pulseRed {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 30px rgba(255, 0, 0, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 12px 50px rgba(255, 0, 0, 0.6); }
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            color: #ff6666;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            padding: 8px 20px;
+            border-radius: 25px;
+            background: rgba(255, 0, 0, 0.05);
+            border: 1px solid rgba(255, 50, 50, 0.1);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 0, 0, 0.1);
+            border-color: #ff3333;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
             }
             
-            .ai-chat-trigger {
-                width: 55px;
-                height: 55px;
-                bottom: 25px;
-                left: 20px;
-                font-size: 24px;
+            .content {
+                padding: 15px;
+            }
+
+            .models-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .model-btn {
+                padding: 20px 15px;
+                font-size: 1em;
+            }
+
+            .question-text {
+                font-size: 1.1em;
+            }
+
+            .option {
+                padding: 14px 18px;
+            }
+
+            .option label {
+                font-size: 0.95em;
+            }
+
+            .score-number {
+                font-size: 3.5em;
+            }
+
+            .dua-text {
+                font-size: 1.1em;
+            }
+
+            .dua-text .arabic {
+                font-size: 1.4em;
             }
         }
-        /* ==================== End AI Chat Styles ==================== */
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 <span class="highlight">Abdullah</span>-Tech09</h1>
+            <p>📚 اختبار تاريخ الأردن - 2009 | جميع النماذج</p>
+        </div>
 
-<div id="three-canvas"></div>
-<div class="noise-overlay"></div>
-<div class="cursor-dot"></div>
-<div class="cursor-outline"></div>
-
-<!-- AI Chat Button -->
-<div class="ai-chat-trigger" id="aiChatTrigger" title="المساعد الذكي">
-    <i class="fas fa-robot"></i>
-</div>
-
-<!-- AI Chat Window -->
-<div class="ai-chat-window" id="aiChatWindow">
-    <div class="ai-chat-header">
-        <div class="ai-chat-header-left">
-            <div class="ai-avatar"><i class="fas fa-brain"></i></div>
-            <div class="ai-header-info">
-                <h4>NEURO ASSISTANT</h4>
-                <span>متصل | Gemini AI</span>
+        <div class="dua-section">
+            <div class="dua-text">
+                <span class="arabic">🤲 اللهمّ ارزقنا النجاح والتوفيق في التوجيهي</span>
+                <span class="translation">
+                    <span class="dua-decoration">✨</span>
+                    اللهمّ افتح علينا فتوح العارفين، ووفقنا لما تحب وترضى
+                    <span class="dua-decoration">✨</span>
+                </span>
+                <span class="translation" style="font-size:0.9em; color:#ff8888; margin-top:5px;">
+                    🤍 اللهمّ يسّر علينا أمورنا، واجعلنا من الناجحين الفائزين
+                </span>
             </div>
         </div>
-        <button class="ai-chat-close" id="aiChatClose"><i class="fas fa-times"></i></button>
-    </div>
-    
-    <div class="ai-chat-messages" id="aiChatMessages">
-        <div class="ai-message bot">
-            <div class="ai-message-avatar"><i class="fas fa-robot"></i></div>
-            <div class="ai-message-content">
-                🚀 أهلاً بك! أنا المساعد الذكي لـ <strong>أربكس البرمجة</strong>.
-                <br><br>
-                كيف يمكنني مساعدتك اليوم؟
-                <br>• خدمات البرمجة والتطوير
-                <br>• الباقات والأسعار
-                <br>• المشاريع التقنية
-                <br>• الاستشارات الهندسية
-                <br><br>
-                فقط اسأل وسأجيبك فوراً! ✨
+
+        <div class="content">
+            <div class="screen active" id="modelScreen">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #ffcccc; font-size: 2em; text-shadow: 0 0 30px rgba(255,0,0,0.2);">
+                    📝 اختر النموذج
+                </h2>
+                <div class="models-grid" id="modelsContainer"></div>
+                <p style="text-align: center; color: #ff9999; margin-top: 30px; font-weight: 500; font-size: 1.1em;">
+                    ✨ اختر أحد النماذج لبدء الاختبار المتكامل
+                </p>
+            </div>
+
+            <div class="screen" id="questionScreen">
+                <div class="question-container">
+                    <div class="question-header">
+                        <div class="question-number">📌 السؤال <span id="currentQ">1</span></div>
+                        <div class="progress">
+                            <span id="questionProgress">1</span> / <span id="totalQuestions">40</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+
+                    <div class="question-text" id="questionText"></div>
+
+                    <div class="options-group" id="optionsContainer"></div>
+
+                    <div class="feedback" id="feedback"></div>
+
+                    <div class="button-group">
+                        <button class="btn-back" onclick="goBack()">← الرجوع</button>
+                        <button class="btn-submit" onclick="submitAnswer()">✅ تأكيد الإجابة</button>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn-next" onclick="nextQuestion()" id="nextBtn" style="display: none;">السؤال التالي →</button>
+                </div>
+            </div>
+
+            <div class="screen" id="resultsScreen">
+                <div class="results-container">
+                    <h2 style="color: #ffcccc; font-size: 2.2em; text-shadow: 0 0 30px rgba(255,0,0,0.2);">🏆 تم إكمال الاختبار!</h2>
+                    
+                    <div class="score-box">
+                        <div style="font-size: 1.3em; opacity: 0.9; color: #ffdddd;">النتيجة النهائية</div>
+                        <div class="score-number" id="finalScore">0</div>
+                        <div class="score-message" id="scoreMessage"></div>
+                    </div>
+
+                    <div class="results-details">
+                        <h3 style="margin-bottom: 20px; color: #ffcccc; font-size: 1.3em;">📊 تفاصيل الإجابات</h3>
+                        <div id="resultsDetail"></div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn-restart" onclick="restartExam()">🔄 اختبار آخر</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="ai-typing-indicator" id="aiTyping">
-        <div class="ai-typing-dot"></div>
-        <div class="ai-typing-dot"></div>
-        <div class="ai-typing-dot"></div>
-    </div>
-    
-    <div class="ai-quick-actions">
-        <button class="ai-quick-btn" onclick="sendQuickMessage('ما هي خدماتكم الرئيسية؟')">💎 الخدمات</button>
-        <button class="ai-quick-btn" onclick="sendQuickMessage('كم تكلفة تطوير موقع إلكتروني؟')">💰 الأسعار</button>
-        <button class="ai-quick-btn" onclick="sendQuickMessage('كيف أتواصل مع فريق الدعم؟')">📞 الدعم</button>
-        <button class="ai-quick-btn" onclick="sendQuickMessage('حدثني عن الذكاء الاصطناعي عندكم')">🤖 الذكاء الاصطناعي</button>
-    </div>
-    
-    <div class="ai-chat-input-wrap">
-        <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="اكتب سؤالك هنا... ✦" maxlength="500">
-        <button class="ai-chat-send" id="aiChatSend"><i class="fas fa-paper-plane"></i></button>
-    </div>
-</div>
 
-<nav class="glass-nav" id="navbar">
-    <div class="logo">✦ ARABESQUE_AI ✦</div>
-    <a href="#contact" class="btn-cyber" style="padding: 0.6rem 1.6rem;"><i class="fas fa-arrow-left"></i> إشعال المستقبل</a>
-</nav>
-
-<section class="hero" id="home">
-    <div data-aos="fade-up" data-aos-duration="1200">
-        <div class="glow-chip">
-            <i class="fas fa-brain"></i>
-            <span>الإصدار 6.0 | محرك الكم العصبي | NEURO SYMPHONY</span>
-        </div>
-        <h1>أربكس البرمجة<br><span class="hero-gradient-text">حيث تُكتب سيمفونية الغد</span></h1>
-        <p style="max-width: 800px; margin: 0 auto 2rem; color: #d0e2ff; font-size: 1.3rem; font-weight: 500;">من الخوادم الكمومية إلى الروبوتات المدركة — نبني واقعًا موازيًا من الإبداع التكنولوجي.</p>
-        <div class="stats-grid" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-item"><div class="stat-number" data-target="247">0</div><p>مشروع ذكي</p></div>
-            <div class="stat-item"><div class="stat-number" data-target="98">0</div><p>عميل نشط</p></div>
-            <div class="stat-item"><div class="stat-number" data-target="24">0</div><p>شريك تقني</p></div>
-        </div>
-        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-            <a href="#subs" class="btn-cyber"><i class="fas fa-crown"></i> باقات السيادة الرقمية</a>
-            <a href="https://wa.me/962779418419" class="whatsapp-direct" style="margin-top:0;"><i class="fab fa-whatsapp"></i> هندسة استشارية فورية</a>
-        </div>
-    </div>
-</section>
-
-<section class="section-premium" id="subs">
-    <div style="text-align: center; margin-bottom: 4rem;" data-aos="fade-up">
-        <h2 style="font-size: 3rem; background: linear-gradient(135deg, #fff, var(--primary-cyan), var(--primary-purple)); -webkit-background-clip: text; background-clip: text; color: transparent;">الاشتراكات الفائقة</h2>
-        <div style="width: 140px; height: 4px; background: linear-gradient(90deg, var(--primary-cyan), var(--primary-purple), #ff66cc); margin: 20px auto;"></div>
-    </div>
-    <div class="cards-container">
-        <div class="future-card sub-small-proj" data-aos="flip-right">
-            <div class="card-icon"><i class="fas fa-microchip"></i></div>
-            <h3>حلول النانو الذكية</h3>
-            <p>سكربتات مخصصة بتقنيات Quantum-Ready، تطبيقات سطح المكتب فائقة السرعة، مواقع شخصية بنظام إدارة يعمل بالذكاء الاصطناعي.</p>
-            <a href="https://www.instagram.com/rbkslbrmjh?igsh=MWFwNWduMXcxZXh5Mw==" class="btn-insta-sub"><i class="fab fa-instagram"></i> اطلب الآن</a>
-        </div>
-        <div class="future-card sub-dev-code" data-aos="flip-right" data-aos-delay="100">
-            <div class="card-icon"><i class="fas fa-shield-haltered"></i></div>
-            <h3>هندسة الأكواد الدفاعية</h3>
-            <p>تدقيق أمني شامل، تحسين أداء بنسبة 200%، تحديث لغات البرمجة وتطبيق أنماط معمارية مقاومة للاختراق.</p>
-            <a href="https://www.instagram.com/rbkslbrmjh?igsh=MWFwNWduMXcxZXh5Mw==" class="btn-insta-sub"><i class="fab fa-instagram"></i> ابدأ التطوير</a>
-        </div>
-        <div class="future-card sub-web-sites" data-aos="flip-right" data-aos-delay="200">
-            <div class="card-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-            <h3>المدن الرقمية المتكاملة</h3>
-            <p>متاجر إلكترونية بتجربة هولوغرافية، لوحات تحكم تفاعلية 3D، وأنظمة خلفية بتقنية Serverless.</p>
-            <a href="https://www.instagram.com/rbkslbrmjh?igsh=MWFwNWduMXcxZXh5Mw==" class="btn-insta-sub"><i class="fab fa-instagram"></i> احجز منصتك</a>
-        </div>
-        <div class="future-card sub-it-student" data-aos="flip-right" data-aos-delay="300">
-            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-            <h3>الأكاديميا 4.0</h3>
-            <p>دعم شامل للمشاريع الجامعية، توثيق احترافي بتقنيات DevOps، وتطبيقات الذكاء الاصطناعي لأبحاث التخرج.</p>
-            <a href="https://www.instagram.com/rbkslbrmjh?igsh=MWFwNWduMXcxZXh5Mw==" class="btn-insta-sub"><i class="fab fa-instagram"></i> اطلب مشروعك</a>
-        </div>
-    </div>
-</section>
-
-<section class="section-premium" id="message-dev">
-    <div style="text-align: center; max-width: 600px; margin: 0 auto; background: rgba(10, 10, 26, 0.8); backdrop-filter: blur(20px); border-radius: 40px; padding: 3rem; border: 1px solid var(--primary-cyan); box-shadow: var(--neon-glow-cyan);" data-aos="zoom-in">
-        <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; font-family: 'Orbitron';">📡 قـناة الاتصال الـمباشر</h2>
-        <p style="margin-bottom: 2rem; color: var(--primary-cyan);">أرسل رسالة فورية إلى عقل النظام (المبرمج)</p>
-        <textarea id="devMessage" class="cyber-input" placeholder="اكتب شفرتك أو رسالتك هنا..." rows="4"></textarea>
-        <button onclick="sendToDev()" class="btn-cyber"><i class="fas fa-paper-plane"></i> بـث الرسالـة الآن</button>
-    </div>
-</section>
-
-<section class="section-premium" id="services">
-    <div style="text-align: center; margin-bottom: 4rem;" data-aos="fade-up">
-        <h2 style="font-size: 2.8rem;"><span style="color: var(--primary-cyan);">محطات</span> التحول الرقمي الفائق</h2>
-        <div style="width: 110px; height: 4px; background: var(--primary-cyan); margin: 15px auto; box-shadow: var(--neon-glow-cyan);"></div>
-    </div>
-    <div class="cards-container">
-        <div class="future-card" data-aos="zoom-in-up">
-            <div class="service-image-wrap"><img src="https://healthray.com/wp-content/uploads/2025/02/AI-based-Hospital-Management-System-For-Advanced-Care-Healthray.webp" alt="Digital Clinic" class="service-img"></div>
-            <h3>العيادات الرقمية التكيفية 5.0</h3>
-            <p>منصة طبية شاملة: أرشفة ذكية بتقنية البلوكشين، حجوزات فورية بالذكاء الاصطناعي، وتقارير آنية.</p>
-        </div>
-        <div class="future-card" data-aos="zoom-in-up" data-aos-delay="100">
-            <div class="service-image-wrap"><img src="https://gsdcdata.s3.amazonaws.com/gsdc/image/top-8-generative-ai-tools-for-software-development.jpg" alt="AI Robotics" class="service-img"></div>
-            <h3>أسطول الروبوتات العصبية</h3>
-            <p>وكلاء محادثة فائقة الذكاء (GPT-based)، وأنظمة تحليل تنبؤي تعتمد على التعلم العميق متعدد الطبقات.</p>
-        </div>
-        <div class="future-card" data-aos="zoom-in-up" data-aos-delay="200">
-            <div class="service-image-wrap"><img src="https://assets-global.website-files.com/63498f3b23c754f0ded5ac2b/65a93b840e095cf53bd0bb2c_1.jpg" alt="Cloud Infrastructure" class="service-img"></div>
-            <h3>الحوسبة الكمومية السحابية</h3>
-            <p>أنظمة ERP مؤسسية هجينة تربط أقسامك عبر واجهة واحدة ذكية مع توقعات تشغيلية فورية.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section-premium" id="contact">
-    <div style="text-align: center; max-width: 800px; margin: 0 auto; background: rgba(0,0,0,0.65); backdrop-filter: blur(25px); border-radius: 60px; padding: 3rem 2rem; border: 1px solid var(--primary-cyan);" data-aos="flip-up">
-        <h2 style="font-size: 2.8rem; margin-bottom: 1rem;">🚀 أطلق محرّك الابتكار</h2>
-        <p style="margin-bottom: 2rem; font-size: 1.2rem;">جميع الحلول صُممت وهندست بواسطة فريق الخبراء الرقميين.</p>
-        <div style="display: flex; justify-content: center; gap: 2.5rem; margin-bottom: 2.5rem;">
-            <a href="https://www.facebook.com/share/189iZ3d1dG/" class="social-glass"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/rbkslbrmjh?igsh=MWFwNWduMXcxZXh5Mw==" class="social-glass"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/962779418419" class="social-glass"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <a href="https://wa.me/962779418419" class="whatsapp-direct" style="margin-top:0;"><i class="fab fa-whatsapp fa-2x"></i> استشارة فورية مع فريق العمل</a>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 أربكس البرمجة — السيمفونية الرقمية غير المنقطعة. جميع الحقوق محفوظة تحت رخصة الإبداع اللامحدود.</p>
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script type="importmap">
-    { "imports": { "three": "https://unpkg.com/three@0.128.0/build/three.module.js" } }
-</script>
-<script type="module">
-    import * as THREE from 'three';
-    const canvasDiv = document.getElementById('three-canvas');
-    const scene = new THREE.Scene();
-    scene.background = null;
-    scene.fog = new THREE.FogExp2(0x05050f, 0.008);
-    const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(2, 1.5, 10);
-    camera.lookAt(0, 0, 0);
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x000000, 0);
-    canvasDiv.appendChild(renderer.domElement);
-    const knotGeo = new THREE.TorusKnotGeometry(1.5, 0.35, 300, 48, 3, 4);
-    const knotMat = new THREE.MeshStandardMaterial({ color: 0x00f7ff, wireframe: true, emissive: 0x005588, emissiveIntensity: 0.7 });
-    const knot = new THREE.Mesh(knotGeo, knotMat);
-    scene.add(knot);
-    const ringGeo = new THREE.TorusGeometry(2.2, 0.07, 128, 200);
-    const ringMat = new THREE.MeshStandardMaterial({ color: 0xb000ff, emissive: 0x440066 });
-    const ring = new THREE.Mesh(ringGeo, ringMat);
-    scene.add(ring);
-    const starsGeometry = new THREE.BufferGeometry();
-    const starsCount = 1500;
-    const starsPos = [];
-    for (let i = 0; i < starsCount; i++) {
-        starsPos.push((Math.random() - 0.5) * 200);
-        starsPos.push((Math.random() - 0.5) * 100);
-        starsPos.push((Math.random() - 0.5) * 80 - 40);
-    }
-    starsGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(starsPos), 3));
-    const starMat = new THREE.PointsMaterial({ color: 0x88aaff, size: 0.2, transparent: true, opacity: 0.6 });
-    const starsField = new THREE.Points(starsGeometry, starMat);
-    scene.add(starsField);
-    const light1 = new THREE.PointLight(0xff44cc, 0.9);
-    light1.position.set(3, 4, 5);
-    scene.add(light1);
-    const light2 = new THREE.PointLight(0x44aaff, 1);
-    light2.position.set(-3, 2, 6);
-    scene.add(light2);
-    const ambient = new THREE.AmbientLight(0x222222);
-    scene.add(ambient);
-    let time = 0;
-    function animate() {
-        requestAnimationFrame(animate);
-        time += 0.008;
-        knot.rotation.y = time * 0.8;
-        knot.rotation.x = Math.sin(time * 0.4) * 0.3;
-        knot.rotation.z = Math.cos(time * 0.2) * 0.2;
-        ring.rotation.z += 0.005;
-        ring.rotation.x += 0.003;
-        starsField.rotation.y += 0.0005;
-        starsField.rotation.x += 0.0003;
-        camera.position.x = Math.sin(time * 0.2) * 0.7;
-        camera.lookAt(0, 0, 0);
-        renderer.render(scene, camera);
-    }
-    animate();
-    window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-</script>
-<script>
-    if (history.scrollRestoration) {
-        history.scrollRestoration = 'manual';
-    }
-    window.scrollTo(0, 0);
-
-    AOS.init({ once: false, mirror: true, duration: 800 });
-    
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('navbar');
-        if (window.scrollY > 50) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-    });
-
-    function sendToDev() {
-        const msg = document.getElementById('devMessage').value;
-        if (!msg) { alert("أدخل رسالة أولاً!"); return; }
-        fetch('https://ntfy.sh/abdullah_dev_2026', {
-            method: 'POST',
-            body: msg
-        }).then(() => {
-            alert("تـم بـث الرسالـة بنجاح!");
-            document.getElementById('devMessage').value = "";
-        });
-    }
-    
-    document.body.addEventListener('click', (e) => {
-        for (let i = 0; i < 12; i++) {
-            const p = document.createElement('div');
-            p.className = 'neon-particle';
-            p.style.left = e.clientX + (Math.random() - 0.5) * 25 + 'px';
-            p.style.top = e.clientY + (Math.random() - 0.5) * 25 + 'px';
-            p.style.width = Math.random() * 12 + 4 + 'px';
-            p.style.height = p.style.width;
-            document.body.appendChild(p);
-            setTimeout(() => p.remove(), 900);
-        }
-    });
-    
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorOutline = document.querySelector('.cursor-outline');
-    window.addEventListener('mousemove', (e) => {
-        cursorDot.style.left = e.clientX + 'px';
-        cursorDot.style.top = e.clientY + 'px';
-        cursorOutline.style.left = e.clientX + 'px';
-        cursorOutline.style.top = e.clientY + 'px';
-    });
-    document.querySelectorAll('a, button, .btn-cyber, .social-glass').forEach(el => {
-        el.addEventListener('mouseenter', () => cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.6)');
-        el.addEventListener('mouseleave', () => cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)');
-    });
-    
-    const counters = document.querySelectorAll('.stat-number');
-    const startCounting = () => {
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                let count = parseInt(counter.innerText);
-                const increment = Math.ceil(target / 35);
-                if (count < target) {
-                    count += increment;
-                    counter.innerText = count;
-                    setTimeout(updateCount, 30);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-            updateCount();
-        });
-    };
-    const statsSection = document.querySelector('.stats-grid');
-    let observed = false;
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !observed) {
-                startCounting();
-                observed = true;
-            }
-        });
-    }, { threshold: 0.5 });
-    if (statsSection) observer.observe(statsSection);
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    });
-
-    window.addEventListener('load', () => {
-        setTimeout(() => { window.scrollTo(0, 0); }, 100);
-    });
-
-    // ==================== AI Chat Logic ====================
-    const GEMINI_API_KEY = 'AIzaSyBfzjGDS6taEvecGyLoNR-hkuo9_9ub6tA';
-    const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
-    
-    const chatTrigger = document.getElementById('aiChatTrigger');
-    const chatWindow = document.getElementById('aiChatWindow');
-    const chatClose = document.getElementById('aiChatClose');
-    const chatMessages = document.getElementById('aiChatMessages');
-    const chatInput = document.getElementById('aiChatInput');
-    const chatSend = document.getElementById('aiChatSend');
-    const typingIndicator = document.getElementById('aiTyping');
-    
-    const SYSTEM_PROMPT = `أنت المساعد الذكي لموقع "أربكس البرمجة" (NEURO SYMPHONY). خبير برمجة وتقنية.
-معلومات الموقع: أربكس البرمجة - برمجة، تطوير مواقع، تطبيقات، ذكاء اصطناعي، روبوتات، أنظمة سحابية، استشارات تقنية. واتساب: 962779418419+
-قواعدك: أجب بالعربية، كن ودوداً ومختصراً (150 كلمة كحد أقصى)، ركز على البرمجة والتقنية، استخدم إيموجي باعتدال. لا تقل أنك Gemini، قل أنك المساعد الذكي لأربكس البرمجة.`;
-    
-    let chatHistory = [
-        { role: "user", parts: [{ text: "من أنت؟" }] },
-        { role: "model", parts: [{ text: "أنا المساعد الذكي لموقع أربكس البرمجة (NEURO SYMPHONY). خبير في البرمجة والتقنية، هنا لمساعدتك!" }] }
-    ];
-    
-    chatTrigger.addEventListener('click', () => {
-        if (chatWindow.classList.contains('open')) {
-            chatWindow.classList.remove('open');
-            chatTrigger.classList.remove('active');
-            chatTrigger.innerHTML = '<i class="fas fa-robot"></i>';
-        } else {
-            chatWindow.classList.add('open');
-            chatTrigger.classList.add('active');
-            chatTrigger.innerHTML = '<i class="fas fa-times"></i>';
-            chatInput.focus();
-        }
-    });
-    
-    chatClose.addEventListener('click', () => {
-        chatWindow.classList.remove('open');
-        chatTrigger.classList.remove('active');
-        chatTrigger.innerHTML = '<i class="fas fa-robot"></i>';
-    });
-    
-    function addMessage(text, isUser = false) {
-        const div = document.createElement('div');
-        div.className = `ai-message ${isUser ? 'user' : 'bot'}`;
-        const av = document.createElement('div');
-        av.className = 'ai-message-avatar';
-        av.innerHTML = isUser ? '<i class="fas fa-user"></i>' : '<i class="fas fa-robot"></i>';
-        const cnt = document.createElement('div');
-        cnt.className = 'ai-message-content';
-        cnt.textContent = text;
-        div.appendChild(av);
-        div.appendChild(cnt);
-        chatMessages.appendChild(div);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-    
-    function showTyping() { typingIndicator.classList.add('active'); chatMessages.scrollTop = chatMessages.scrollHeight; }
-    function hideTyping() { typingIndicator.classList.remove('active'); }
-    
-    async function callGeminiAPI(userMessage) {
-        try {
-            chatHistory.push({ role: "user", parts: [{ text: userMessage }] });
-            if (chatHistory.length > 20) chatHistory = chatHistory.slice(-20);
+        <div class="footer">
+            <p style="font-size: 1.1em; font-weight: 500;">© 2024 Abdullah-Tech09 | منصة اختبارات تفاعلية متكاملة</p>
             
-            const resp = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    contents: [
-                        { role: "user", parts: [{ text: SYSTEM_PROMPT }] },
-                        { role: "model", parts: [{ text: "حسناً، التزم." }] },
-                        ...chatHistory
-                    ],
-                    generationConfig: { temperature: 0.7, topK: 40, topP: 0.95, maxOutputTokens: 500 }
-                })
+            <div class="social-links">
+                <a href="https://www.youtube.com/@Abdullah-Tech09" target="_blank" class="social-link">
+                    🎥 قناتي على يوتيوب
+                </a>
+                <a href="#" class="social-link">
+                    📧 للتواصل
+                </a>
+            </div>
+            
+            <div class="subscribe-badge">
+                🔔 اشتركو عشان أضل مستمر
+            </div>
+            
+            <p style="margin-top: 15px; font-size: 0.85em; color: #886666;">
+                ❤️ نسألكم الدعاء لجميع طلاب التوجيهي
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // DATABASE - All Questions from PDF
+        const examModels = {
+            1: { name: 'النموذج 1', questions: [
+                { q: 'تبدأ عصور ما قبل التاريخ من نشأة الإنسان على الأرض حتى :', options: ['بداية استخدام معدن البرونز', 'بداية ظهور دويلات المدن', 'بداية اختراع الكتابة', 'بداية استخدام معدن النحاس'], correct: 'ج' },
+                { q: 'واحدة مما يأتي تعتبر صحيحة فيما يتعلق بمظاهر تطور الحياة الإنسانية في العصر الحجري الحديث :', options: ['صنع التماثيل من الحجر دلالة عبادة آلهة لها علاقة بالخصب', 'ظهرت الملكية الفكرية أي ملكية الحقول والمعلومات', 'تعلم حياة الملابس وبناء المنازل من المواد المتوفرة محليا', 'صنع الأدوات المصنوعة من الحجارة المصقولة'], correct: 'د' },
+                { q: 'واحدة مما يأتي تعتبر صحيحة فيما يتعلق بقارورة تل سيران :', options: ['مذكور عليها أسماء ثلاثة ملوك عمونيين', 'محفوظة في المتحف البريطاني', 'عثر عليها في تل سيران داخل حرم الجامعة الأردنية', 'وجدت عليها نقوش تشير إلى معركة مؤتة'], correct: 'ج' },
+                { q: 'من المعالم الرئيسية الموجودة في البترا :', options: ['قصر العديد', 'رجم المفلوف', 'قصر البنت', 'تمثال الإلهة أفروديت'], correct: 'ج' },
+                { q: 'كل مما يأتي من أسباب اتخاذ الأنباط مدينة البترا عاصمة لهم ، ماعدا :', options: ['موقعها على الطرق التجارية', 'موقعها الحصين بين الجبال', 'قربها من ينابيع المياه', 'بعدها عن ممالك الشورين والبطالمين'], correct: 'د' },
+                { q: 'الموقع الأثري المشهور بسبب الحروب والكوارث الطبيعية من آثار الفترة البيزنطية في الأردن :', options: ['موقع المعطس', 'شارع الأعمدة', 'قصر عراق الأمير', 'موقع أهل الكهف'], correct: 'ج' },
+                { q: 'من المدن الأردنية التي شهدت ازدهارا عمرانيا في الفترة الرومانية :', options: ['مأدبا ، أم قيس', 'أم قيس ، جرش ، عجلون', 'أم قيس ، عمان ، البترا', 'جرش ، عمان ، أم قيس'], correct: 'د' },
+                { q: 'ترتيب أمراء الجيش التي جهزهم الرسول محمد صلى الله عليه وسلم في معركة مؤتة ، هو :', options: ['زيد بن حارثة ، جعفر بن أبي طالب ، عبد الله بن رواحة', 'عبد الله بن رواحة ، جعفر بن أبي طالب ، زيد بن حارثة', 'جعفر بن أبي طالب ، عبد الله بن رواحة ، زيد بن حارثة', 'زيد بن حارثة ، عبد الله بن رواحة ، جعفر بن أبي طالب'], correct: 'أ' },
+                { q: 'تعتبر معركة اليرموك من المعارك الفاصلة في تاريخ بلاد الشام ، بسبب :', options: ['حماية طريق الحج الشامي', 'فتح مدن بلاد الشام جميعها وانتشار الإسلام فيها', 'حماية الطريق التجاري إلى شبه الجزيرة العربية', 'إنهاء الحكم البيزنطي لبلاد الشام'], correct: 'ب' }
+            ]},
+            2: { name: 'النموذج 2', questions: [
+                { q: 'الموقع الأردني الذي يحتوي على أقدم تماثيل في العالم المصنوعة للعبادة :', options: ['عيون الحمام', 'تل أبو حامد', 'عين غزال', 'جاوا'], correct: 'ج' },
+                { q: 'من مظاهر تطور الحياة الإنسانية في العصر الحجري القديم :', options: ['اكتشاف النحاس والملاجئ الصخرية', 'ظهور نظام (دويلات أو دولة المدينة)', 'سكن الكهوف والملاجئ الصخرية', 'تعلم حياة الملابس وبناء البيوت'], correct: 'ج' },
+                { q: 'واحدة مما يأتي تعتبر صحيحة فيما يتعلق بمملكة الموآبيين :', options: ['من أشهر ملوكهم نحاش الأول', 'امتدت المملكة من وادي الزرقاء إلى وادي الموجب شمالا', 'عبد الآدوميون الإله كموش ويرافقه في المعابد', 'اعتمدوا نظام الحكم القبلي تحت شيخ القبيلة'], correct: 'د' },
+                { q: 'من عوامل تطور التجارة عند الأنباط ، هي :', options: ['موقعها على طريق الحرير التجاري', 'موقعها الحصين بين الجبال', 'السفن التي تجلب البضائع عبر البحر المتوسط', 'نقل الرومان مركز التجارة إلى مملكة تدمر'], correct: 'د' },
+                { q: 'اللغة الرسمية التي استخدمتها الأنباط في الفترة البيزنطية ، هي :', options: ['الأشورية', 'اليونانية', 'الآرامية', 'النبطية'], correct: 'ج' },
+                { q: 'الحضارة التي تفاعلت مع حضارات الشرق الأدنى وخاصة بلاد الشام في الفترة البيزنطية ، هي :', options: ['الفرعونية', 'السلطانية', 'الهيلينستية', 'الإسلامية'], correct: 'ج' },
+                { q: 'من مدن الديكابولس وتسمى بأم قيس في العصر الروماني ، هي :', options: ['أم قيس', 'طبقة فحل', 'قويلة', 'لا شيء'], correct: 'أ' },
+                { q: 'المعركة التي قام بها شرحبيل بن حسنة فيها حصارا على الرومان استمر أربعة أيام ، هي :', options: ['معركة مؤتة', 'اليرموك', 'طبقة فحل', 'ذات السلاسل'], correct: 'ج' },
+                { q: 'الموقع الأردني الذي يعتبر أقدم موقع لاستخراج معدن النحاس ، هو :', options: ['دوقرة', 'عين غزال', 'وادي فيدان', 'بسطة'], correct: 'ج' },
+                { q: 'من مظاهر تطور الحياة الإنسانية في العصر البرونزي :', options: ['اكتشاف النحاس والملاجئ الصخرية', 'ظهور نظام (دويلات أو دولة المدينة)', 'سكن الكهوف والملاجئ الصخرية', 'تعلم حياة الملابس وبناء البيوت'], correct: 'ب' }
+            ]},
+            3: { name: 'النموذج 3', questions: [
+                { q: 'واحدة مما يأتي تعتبر صحيحة فيما يتعلق بقارورة تل سيران :', options: ['على سطحها الخارجي كتابة مكونة من (29) حرفا', 'منقوشة في (9) أسطر ، تذكر أسماء (3) ملوك عمونيين', 'عثر في داخلها على بذور وخرز وورق', 'دفنت في تل سيران داخل حرم الجامعة الأردنية'], correct: 'ج' },
+                { q: 'الملك النبطي الذي كانت فترة حكمه الأطول والأكثر ازدهارا في تاريخ الأنباط ، هو :', options: ['رب أيل الثاني', 'عبادة الأول', 'الحارث الرابع', 'الحارث الثالث'], correct: 'ب' },
+                { q: 'من أسباب ضعف مملكة الأنباط :', options: ['نقل مركز التجارة إلى مملكة أدوم', 'سيطرة البطالمة على الطرق التجارية وحروب الأنباط معهم', 'ضعف بعض ملوك الأنباط', 'الاحتلال الروماني لبلاد الشام عام (64 ق.م)'], correct: 'ج' },
+                { q: 'اللغة الرسمية في بلاد الشام خلال الفترة الرومانية ، هي :', options: ['اللاتينية', 'اليونانية', 'الآرامية', 'النبطية'], correct: 'ج' },
+                { q: 'الترتيب الصحيح للمدن التي يمر بها نهر اليرموك (من البداية إلى النهاية) ، هو :', options: ['أم قيس ← درعا ← وادي الشلالة ← أم قيس', 'درعا ← الطرة ← وادي الشلالة ← أم قيس', 'أم قيس ← درعا ← وادي الموجب ← أم الجمال', 'درعا ← وادي الشلالة ← أم قيس ← أم الرصاص'], correct: 'ب' },
+                { q: 'المعركة التي استطاع فيها المسلمون فتح بلاد الشام حتى مدينة دمشق ، هي :', options: ['مؤتة', 'اليرموك', 'أجنادين', 'طبقة فحل'], correct: 'ب' },
+                { q: 'السبب المباشر لغزو الرومان للمسلمين في بلاد الشام، هو :', options: ['انتصار الرومان على المسلمين في معركة أجنادين', 'رغبة الروم باستعادة الهيمنة على الدول الإسلامية', 'انتصار المسلمين على الروم في مؤتة', 'قتل الرسول صلى الله عليه وسلم ثلاثة أمراء'], correct: 'ج' },
+                { q: 'من الشخصيات التي دخلت الإسلام في بداية الدعوة الإسلامية في بلاد الشام :', options: ['الغساسنة', 'بنو كلب', 'بنو عذرة', 'بنو لخم'], correct: 'أ' },
+                { q: 'من أسباب معركة مؤتة :', options: ['فتح مدينة أيلة', 'حماية الطريق التجاري إلى شبه الجزيرة العربية', 'معاقبة الرومان على قتلهم سفيرا مسلما', 'الاستعداد للفتوح الإسلامية'], correct: 'ج' },
+                { q: 'قائد الجيش الأردني الذي حارب مع الروم في معركة الزاب :', options: ['محمد بن علي', 'عبد الملك بن مروان', 'أبو جعفر المنصور', 'عمر بن الخطاب'], correct: 'أ' }
+            ]},
+            4: { name: 'النموذج 4', questions: [
+                { q: 'الموقع الأردني الذي يعتبر أقدم موقع في العالم يعود إلى (16) ألف عام ، وعليه أقدم تماثيل :', options: ['دوقرة', 'عين غزال', 'عيون الحمام', 'بسطة'], correct: 'ج' },
+                { q: 'الترتيب الصحيح لأبرز مظاهر تطور الحياة الإنسانية في العصور الحجرية :', options: ['اكتشاف النحاس ، اكتشاف البرونز ، اختراع الكتابة', 'اكتشاف النحاس ، اختراع الكتابة ، اكتشاف البرونز', 'اختراع الكتابة ، اكتشاف النحاس ، اكتشاف البرونز', 'سكن الكهوف والملاجئ ، تأسيس الحضارات، حياة البدو'], correct: 'د' },
+                { q: 'في أي من المواقع التالية يمكن العثور على آثار المملكة الموآبية :', options: ['حسيان وعمان والمفرق', 'حسيان والمفرق وعمان', 'عمان ، حسيان ، المفرق', 'المفرق ، عمان ، حسيان'], correct: 'د' },
+                { q: 'الأهمية التاريخية لمعركة اليرموك ، ما عدا :', options: ['نقل مركز الثقل الحربي من البحر المتوسط إلى الشرق', 'بناء وتشييد الجسور والقنوات المائية على نهر اليرموك', 'ظهور الحضارة الإسلامية وتطورها', 'إنهاء الحكم البيزنطي لبلاد الشام'], correct: 'ب' },
+                { q: 'الإمبراطور الروماني الذي امتدت فتوحاته من وادي الزرقاء إلى وادي لورما ، هو :', options: ['ماركوس', 'قسطنطين', 'تراجان', 'دوميتيان'], correct: 'ج' },
+                { q: 'من المزايا التي تتمتع بها المملكة الموآبية جغرافيا ، ماعدا :', options: ['حكمت المملكة على الموارد المائية', 'الحصين الموجب الذي يؤمن استقرارها', 'الأراضي الخصبة التي توسعت وسيطرت على المنطقة', 'توافر الموارد الطبيعية والأراضي الزراعية والرعاية'], correct: 'ج' },
+                { q: 'من أسباب ازدهار مدينة البترا :', options: ['تقاطع القوافل التجارية في المدينة', 'موقعها الاستراتيجي على طرق التجارة العربية', 'ترسخ الدولة الموآبية في المدينة', 'الاستقرار الأمني والسلام الاجتماعي'], correct: 'ب' },
+                { q: 'العائد الاقتصادي الناتج عن تطور التجارة في العصر البرونزي :', options: ['إنشاء موانئ تجارية وبحار', 'استقرار القبائل العربية', 'نمو المدن وتوسعها', 'ازدهار الصناعات التعدينية'], correct: 'أ' },
+                { q: 'من أسباب اقتصادية لازدهار مدينة البترا :', options: ['تقاطع القوافل التجارية في المدينة', 'موقعها الاستراتيجي على طرق التجارة العربية', 'ترسخ الدولة الموآبية في المدينة', 'الاستقرار الأمني والسلام الاجتماعي'], correct: 'ب' },
+                { q: 'حضارة إنسانية ازدهرت في جنوب الأردن :', options: ['الأنباط', 'الأدوميون', 'المديانيون', 'اللحيانيون'], correct: 'أ' }
+            ]}
+        };
+
+        // 🔧 هامة: حروف الخيارات الصحيحة
+        const correctLetters = ['أ', 'ب', 'ج', 'د'];
+        const optionValues = ['أ', 'ب', 'ج', 'د'];
+
+        // State
+        let currentModel = null;
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let selectedOption = null;
+        let isAnswered = false;
+
+        // DOM Elements
+        const modelScreen = document.getElementById('modelScreen');
+        const questionScreen = document.getElementById('questionScreen');
+        const resultsScreen = document.getElementById('resultsScreen');
+        const modelsContainer = document.getElementById('modelsContainer');
+        const questionText = document.getElementById('questionText');
+        const optionsContainer = document.getElementById('optionsContainer');
+        const feedback = document.getElementById('feedback');
+        const currentQ = document.getElementById('currentQ');
+        const questionProgress = document.getElementById('questionProgress');
+        const totalQuestions = document.getElementById('totalQuestions');
+        const progressFill = document.getElementById('progressFill');
+        const nextBtn = document.getElementById('nextBtn');
+        const finalScore = document.getElementById('finalScore');
+        const scoreMessage = document.getElementById('scoreMessage');
+        const resultsDetail = document.getElementById('resultsDetail');
+
+        // Initialize Models
+        function initModels() {
+            modelsContainer.innerHTML = '';
+            const icons = ['📘', '📗', '📙', '📕'];
+            Object.keys(examModels).forEach((key, index) => {
+                const model = examModels[key];
+                const btn = document.createElement('button');
+                btn.className = 'model-btn';
+                btn.innerHTML = `<span class="icon">${icons[index % icons.length]}</span>${model.name}`;
+                btn.onclick = () => startExam(parseInt(key));
+                modelsContainer.appendChild(btn);
             });
-            
-            if (!resp.ok) { const e = await resp.json(); throw new Error(e.error?.message || 'خطأ'); }
-            
-            const data = await resp.json();
-            const reply = data.candidates[0]?.content?.parts[0]?.text || 'عذراً، لم أفهم.';
-            chatHistory.push({ role: "model", parts: [{ text: reply }] });
-            return reply;
-        } catch (err) {
-            console.error(err);
-            return '⚠️ عذراً، حدث خطأ. تواصل معنا واتساب: 962779418419+';
         }
-    }
-    
-    async function sendMessage(text) {
-        if (!text.trim()) return;
-        chatInput.disabled = true; chatSend.disabled = true;
-        addMessage(text, true);
-        chatInput.value = '';
-        showTyping();
-        const reply = await callGeminiAPI(text);
-        hideTyping();
-        addMessage(reply, false);
-        chatInput.disabled = false; chatSend.disabled = false;
-        chatInput.focus();
-    }
-    
-    chatSend.addEventListener('click', () => sendMessage(chatInput.value));
-    chatInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(chatInput.value); }
-    });
-    
-    window.sendQuickMessage = function(text) {
-        if (!chatWindow.classList.contains('open')) {
-            chatWindow.classList.add('open');
-            chatTrigger.classList.add('active');
-            chatTrigger.innerHTML = '<i class="fas fa-times"></i>';
-        }
-        sendMessage(text);
-    };
-    // ==================== End AI Chat Logic ====================
-</script>
 
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69f3f7154451ae1c35c0f5ca/1jngfqbhq';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+        // Start Exam
+        function startExam(modelId) {
+            currentModel = modelId;
+            currentQuestionIndex = 0;
+            userAnswers = [];
+            const questions = examModels[currentModel].questions;
+            userAnswers = questions.map(() => null);
+            isAnswered = false;
+            selectedOption = null;
+
+            modelScreen.classList.remove('active');
+            questionScreen.classList.add('active');
+            totalQuestions.textContent = questions.length;
+            showQuestion();
+        }
+
+        // Show Question
+        function showQuestion() {
+            const questions = examModels[currentModel].questions;
+            const q = questions[currentQuestionIndex];
+            currentQ.textContent = currentQuestionIndex + 1;
+            questionProgress.textContent = currentQuestionIndex + 1;
+            progressFill.style.width = ((currentQuestionIndex + 1) / questions.length * 100) + '%';
+            
+            questionText.innerHTML = `<span class="q-number">${currentQuestionIndex + 1}.</span> ${q.q}`;
+
+            // Build options
+            optionsContainer.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const letter = optionValues[idx];
+                const div = document.createElement('div');
+                div.className = 'option';
+                
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'question';
+                radio.value = letter;
+                radio.id = 'opt_' + letter;
+                
+                const label = document.createElement('label');
+                label.htmlFor = 'opt_' + letter;
+                
+                const letterSpan = document.createElement('span');
+                letterSpan.className = 'opt-letter';
+                letterSpan.textContent = letter;
+                
+                label.appendChild(letterSpan);
+                label.appendChild(document.createTextNode(' ' + opt));
+
+                div.appendChild(radio);
+                div.appendChild(label);
+                optionsContainer.appendChild(div);
+
+                // Restore previous answer
+                if (userAnswers[currentQuestionIndex] === letter) {
+                    radio.checked = true;
+                    selectedOption = letter;
+                }
+
+                radio.addEventListener('change', function() {
+                    if (!isAnswered) {
+                        selectedOption = this.value;
+                    }
+                });
+            });
+
+            feedback.className = 'feedback';
+            feedback.textContent = '';
+            feedback.style.display = 'none';
+            nextBtn.style.display = 'none';
+            isAnswered = false;
+
+            // If already answered, show feedback
+            if (userAnswers[currentQuestionIndex] !== null) {
+                const userAns = userAnswers[currentQuestionIndex];
+                const isCorrect = userAns === q.correct;
+                showFeedback(isCorrect, userAns);
+                isAnswered = true;
+                if (currentQuestionIndex < questions.length - 1) {
+                    nextBtn.style.display = 'inline-block';
+                } else {
+                    nextBtn.textContent = '🏆 عرض النتيجة';
+                    nextBtn.style.display = 'inline-block';
+                }
+            }
+        }
+
+        // Submit Answer
+        function submitAnswer() {
+            if (isAnswered) {
+                alert('⚠️ لقد أجبت على هذا السؤال بالفعل!');
+                return;
+            }
+
+            if (!selectedOption) {
+                alert('⚠️ الرجاء اختيار إجابة أولاً!');
+                return;
+            }
+
+            const questions = examModels[currentModel].questions;
+            const q = questions[currentQuestionIndex];
+            const isCorrect = selectedOption === q.correct;
+            userAnswers[currentQuestionIndex] = selectedOption;
+            showFeedback(isCorrect, selectedOption);
+            isAnswered = true;
+
+            if (currentQuestionIndex < questions.length - 1) {
+                nextBtn.style.display = 'inline-block';
+            } else {
+                nextBtn.textContent = '🏆 عرض النتيجة';
+                nextBtn.style.display = 'inline-block';
+            }
+        }
+
+        // Show Feedback
+        function showFeedback(isCorrect, userAns) {
+            const questions = examModels[currentModel].questions;
+            const q = questions[currentQuestionIndex];
+            feedback.style.display = 'block';
+            feedback.className = 'feedback';
+            
+            const correctIndex = optionValues.indexOf(q.correct);
+            const correctText = q.options[correctIndex];
+            
+            if (isCorrect) {
+                feedback.classList.add('correct');
+                feedback.innerHTML = `✅ <strong>إجابة صحيحة!</strong> أحسنت! 🎉`;
+            } else {
+                feedback.classList.add('incorrect');
+                const userIndex = optionValues.indexOf(userAns);
+                const userText = userIndex !== -1 ? q.options[userIndex] : 'لم تختار';
+                feedback.innerHTML = `❌ <strong>إجابة خاطئة.</strong><br>
+                    <span class="correct-answer">📌 الإجابة الصحيحة هي: ${q.correct}. ${correctText}</span>`;
+            }
+        }
+
+        // Next Question
+        function nextQuestion() {
+            const questions = examModels[currentModel].questions;
+            if (currentQuestionIndex === questions.length - 1) {
+                showResults();
+                return;
+            }
+            currentQuestionIndex++;
+            selectedOption = null;
+            showQuestion();
+        }
+
+        // Go Back
+        function goBack() {
+            if (confirm('⚠️ هل أنت متأكد من الرجوع؟ سيتم فقدان تقدمك في هذا النموذج.')) {
+                questionScreen.classList.remove('active');
+                modelScreen.classList.add('active');
+                currentModel = null;
+                nextBtn.textContent = 'السؤال التالي →';
+            }
+        }
+
+        // Show Results
+        function showResults() {
+            questionScreen.classList.remove('active');
+            resultsScreen.classList.add('active');
+
+            const questions = examModels[currentModel].questions;
+            let correct = 0;
+            let detailsHTML = '';
+
+            questions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.correct;
+                if (isCorrect) correct++;
+                const statusClass = isCorrect ? 'result-correct' : 'result-incorrect';
+                const statusText = isCorrect ? '✅ صحيح' : '❌ خاطئ';
+                
+                const correctIndex = optionValues.indexOf(q.correct);
+                const correctText = q.options[correctIndex];
+                const userIndex = userAns ? optionValues.indexOf(userAns) : -1;
+                const userText = userIndex !== -1 ? q.options[userIndex] : 'لم يتم الإجابة';
+                
+                detailsHTML += `
+                    <div class="result-item ${statusClass}">
+                        <strong>سؤال ${idx + 1}:</strong> ${q.q.substring(0, 45)}${q.q.length > 45 ? '...' : ''}<br>
+                        <span style="font-size:0.85rem; opacity:0.8;">
+                            إجابتك: ${userText} | الإجابة الصحيحة: ${q.correct}. ${correctText} | ${statusText}
+                        </span>
+                    </div>
+                `;
+            });
+
+            const total = questions.length;
+            const percentage = Math.round((correct / total) * 100);
+            finalScore.textContent = `${correct} / ${total}`;
+            
+            let msg = '';
+            let emoji = '';
+            if (percentage >= 90) { msg = '🌟 ممتاز! أداء رائع جداً! الله يوفقك'; emoji = '🏆'; }
+            else if (percentage >= 70) { msg = '👍 جيد جداً! يمكنك تحسين أدائك أكثر. توكل على الله'; emoji = '💪'; }
+            else if (percentage >= 50) { msg = '📚 جيد. ننصح بمراجعة المواد الدراسية. بالتوفيق'; emoji = '📖'; }
+            else { msg = '🤲 لا تستسلم! حاول مرة أخرى وستتحسن بإذن الله. الله معك'; emoji = '💫'; }
+            scoreMessage.textContent = `${emoji} ${msg}`;
+
+            resultsDetail.innerHTML = detailsHTML;
+        }
+
+        // Restart
+        function restartExam() {
+            resultsScreen.classList.remove('active');
+            modelScreen.classList.add('active');
+            currentModel = null;
+            currentQuestionIndex = 0;
+            userAnswers = [];
+            selectedOption = null;
+            isAnswered = false;
+            nextBtn.textContent = 'السؤال التالي →';
+        }
+
+        // Init
+        initModels();
+    </script>
 </body>
 </html>
